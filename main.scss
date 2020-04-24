@@ -1,0 +1,165 @@
+// ### Primary
+$backgroundRed: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+// - Blue: hsl(248, 32%, 49%)
+
+// - Dark Blue: hsl(249, 10%, 26%)
+// - Grayish Blue: hsl(246, 25%, 77%)
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background: $backgroundRed url("img/bg-intro-desktop.png");
+
+  @media screen and (max-width: 768px) {
+    background: $backgroundRed url("img/bg-intro-mobile.png");
+  }
+}
+
+.v-align {
+  display: flex;
+  align-items: center;
+}
+
+.form-section {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .left-side {
+    .title {
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+  }
+
+  .right-side {
+    .cta {
+      background-color: hsl(248, 32%, 49%);
+      box-shadow: 0 7px 4px rgba(0, 0, 0, 0.2);
+      height: 55px;
+      text-align: center;
+      color: #fff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+
+      span {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      @media screen and (max-width: 768px) {
+        height: 100px;
+        flex-direction: column;
+      }
+    }
+
+    .form-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 7px 4px rgba(0, 0, 0, 0.2);
+
+      input {
+        border-radius: 5px;
+        height: 50px;
+        padding: 10px 20px;
+      }
+
+      input:focus {
+        border: 1px solid hsl(248, 32%, 49%);
+        box-shadow: none;
+        outline: none;
+      }
+
+      ::-webkit-input-placeholder {
+        /* Edge */
+        color: grey;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: grey;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      ::placeholder {
+        color: grey;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      button[type="submit"] {
+        height: 50px;
+        border-radius: 5px;
+        background-color: $green;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1px;
+        border: none;
+        font-size: 14px;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+      }
+
+      .terms {
+        font-size: 10px;
+        display: block;
+        text-align: center;
+        color: lightgray;
+
+        a {
+          color: $backgroundRed;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+
+      .invalid-feedback {
+          text-align: right;
+          font-style: italic;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 25px;
+      }
+    }
+  }
+}

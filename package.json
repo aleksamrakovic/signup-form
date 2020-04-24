@@ -1,0 +1,20 @@
+{
+  "name": "signup-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node-sass main.scss main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksamrakovic/signup-form.git"
+  },
+  "author": "Aleksa Mrakovic",
+  "license": "ISC",
+  "homepage": "https://github.com/aleksamrakovic/signup-form"
+}
